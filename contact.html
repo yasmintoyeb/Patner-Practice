@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DreamHome</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f5f7f6;
+            color: #1f2937;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: white;
+        }
+
+        .navbar-brand {
+            color: #198754;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            font-weight: 500;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #198754;
+        }
+
+        .page-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                url("https://images.unsplash.com/photo-1560518883-ce09059eeffa") center/cover no-repeat;
+            color: white;
+            padding: 110px 0;
+        }
+
+        .page-hero h1 {
+            font-size: 54px;
+            font-weight: bold;
+        }
+
+        .page-hero p {
+            font-size: 19px;
+            max-width: 650px;
+        }
+
+        .contact-section {
+            padding: 75px 0;
+        }
+
+        .contact-card,
+        .form-card {
+            background-color: white;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .contact-card {
+            height: 100%;
+            padding: 32px;
+        }
+
+        .contact-detail {
+            align-items: flex-start;
+            display: flex;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .contact-detail i {
+            align-items: center;
+            background-color: #e9f7ef;
+            border-radius: 50%;
+            color: #198754;
+            display: flex;
+            flex: 0 0 46px;
+            font-size: 19px;
+            height: 46px;
+            justify-content: center;
+            width: 46px;
+        }
+
+        .contact-detail h5 {
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .contact-detail p {
+            color: #6c757d;
+            margin-bottom: 0;
+        }
+
+        .contact-detail a {
+            color: #6c757d;
+            text-decoration: none;
+        }
+
+        .contact-detail a:hover {
+            color: #198754;
+        }
+
+        .form-card {
+            padding: 35px;
+        }
+
+        .form-control,
+        .form-select {
+            border-color: #dee2e6;
+            padding: 12px 14px;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #198754;
+            box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.15);
+        }
+
+        .office-banner {
+            background-color: #198754;
+            color: white;
+            padding: 55px 20px;
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        @media (max-width: 767px) {
+            .page-hero {
+                padding: 80px 0;
+            }
+
+            .page-hero h1 {
+                font-size: 40px;
+            }
+
+            .form-card {
+                margin-top: 25px;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-house"></i>
+                DreamHome
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Properties</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                </ul>
+                <a href="account.html" class="btn btn-outline-success ms-lg-3">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container">
+            <h1>Let's Find Your Place</h1>
+            <p class="mb-0">Have a question about a property or need help with your search? Our team is ready to help.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-5">
+                        <div class="contact-card">
+                            <h2 class="fw-bold mb-3">Get in touch</h2>
+                            <p class="text-secondary mb-4">Reach out to DreamHome and a property specialist will get back to you shortly.</p>
+
+                            <div class="contact-detail">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <h5>Visit our office</h5>
+                                    <p>24 Green Avenue<br>New York, NY 10001</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail">
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <h5>Call us</h5>
+                                    <p><a href="tel:+12125550189">+1 (212) 555-0189</a><br>Mon - Fri, 9:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail mb-0">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <h5>Email us</h5>
+                                    <p><a href="mailto:hello@dreamhome.com">hello@dreamhome.com</a><br>We reply within one business day.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="form-card">
+                            <h2 class="fw-bold mb-3">Send us a message</h2>
+                            <p class="text-secondary mb-4">Tell us what you are looking for and we will point you in the right direction.</p>
+
+                            <form id="contactForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="fullName" class="form-label">Full name</label>
+                                        <input type="text" class="form-control" id="fullName" placeholder="Your name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Phone number</label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="+1 (000) 000-0000">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="topic" class="form-label">I need help with</label>
+                                        <select class="form-select" id="topic" required>
+                                            <option value="" selected disabled>Choose a topic</option>
+                                            <option>Buying a property</option>
+                                            <option>Renting a property</option>
+                                            <option>Selling a property</option>
+                                            <option>General question</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" rows="5" placeholder="How can we help?" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-success px-4">
+                                            <i class="fa-solid fa-paper-plane me-2"></i>Send message
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="formMessage" class="alert alert-success mt-4 d-none" role="alert">
+                                Thanks for reaching out. We will be in touch soon.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="office-banner text-center">
+            <div class="container">
+                <h2 class="fw-bold">Ready to make a move?</h2>
+                <p class="mb-0">Let DreamHome help you take the next step toward a place you love.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h5 class="fw-bold"><i class="fa-solid fa-house me-2"></i>DreamHome</h5>
+                    <p class="text-white-50 mb-0">Helping you find a place to call home.</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Explore</h6>
+                    <a href="index.html">Home</a><br>
+                    <a href="about.html">About us</a>
+                </div>
+                <div class="col-md-3">
+                    <h6>Connect</h6>
+                    <a href="contact.html">Contact us</a><br>
+                    <a href="account.html">My account</a>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <p class="text-white-50 mb-0">&copy; 2025 DreamHome. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            document.getElementById("formMessage").classList.remove("d-none");
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
