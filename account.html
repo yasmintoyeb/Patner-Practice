@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Account - DreamHome</title>
+
+    <!-- Bootstrap 5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f5f7f6;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: white;
+        }
+
+        .navbar-brand {
+            color: #198754;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #198754;
+        }
+
+        /* Account Header */
+        .account-header {
+            background-color: #198754;
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+        }
+
+        /* Cards */
+        .account-card {
+            background-color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .account-menu {
+            border: none;
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            background-color: white;
+            text-align: left;
+            width: 100%;
+        }
+
+        .account-menu:hover {
+            background-color: #e9f7ef;
+            color: #198754;
+        }
+
+        .account-menu.active {
+            background-color: #198754;
+            color: white;
+        }
+
+        .property-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .property-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .property-card img {
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .price {
+            color: #198754;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .status {
+            font-size: 13px;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-house"></i>
+                DreamHome
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="properties.html">
+                            Properties
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            About
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active text-success" href="account.html">
+                            <i class="fa-solid fa-user"></i>
+                            Account
+                        </a>
+                    </li>
+
+                </ul>
+
+                <a href="sign-in.html" class="btn btn-outline-success ms-lg-3">
+                    Sign Out
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ================= ACCOUNT HEADER ================= -->
+
+    <section class="account-header">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-3 text-center mb-3 mb-md-0">
+
+                    <img src="https://i.pravatar.cc/300?img=47" alt="Profile Picture" class="profile-img">
+
+                </div>
+
+
+                <div class="col-md-9">
+
+                    <h1 class="fw-bold">
+                        Welcome, Yasmin Toyeb!
+                    </h1>
+
+                    <p class="mb-1">
+                        <i class="fa-solid fa-envelope"></i>
+                        yasmin@example.com
+                    </p>
+
+                    <p class="mb-0">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Phnom Penh, Cambodia
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ACCOUNT CONTENT ================= -->
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+
+                <!-- ================= SIDEBAR ================= -->
+
+                <div class="col-lg-3">
+
+                    <div class="account-card">
+
+                        <h5 class="fw-bold mb-4">
+                            My Account
+                        </h5>
+
+
+                        <button class="account-menu active">
+                            <i class="fa-solid fa-user me-2"></i>
+                            Profile
+                        </button>
+
+
+                        <button class="account-menu">
+                            <i class="fa-solid fa-heart me-2"></i>
+                            Saved Properties
+                        </button>
+
+
+                        <button class="account-menu">
+                            <i class="fa-solid fa-clock-rotate-left me-2"></i>
+                            Recently Viewed
+                        </button>
+
+
+                        <button class="account-menu">
+                            <i class="fa-solid fa-gear me-2"></i>
+                            Settings
+                        </button>
+
+
+                        <button class="account-menu text-danger">
+                            <i class="fa-solid fa-right-from-bracket me-2"></i>
+                            Sign Out
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= MAIN CONTENT ================= -->
+
+                <div class="col-lg-9">
+
+
+                    <!-- Profile -->
+
+                    <div class="account-card mb-4">
+
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+
+                            <h4 class="fw-bold mb-0">
+                                Personal Information
+                            </h4>
+
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+                                <i class="fa-solid fa-pen"></i>
+                                Edit Profile
+                            </button>
+
+                        </div>
+
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+
+                                <label class="form-label fw-bold">
+                                    Full Name
+                                </label>
+
+
+                                <input type="text" class="form-control" value="Yasmin Toyeb" readonly>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label class="form-label fw-bold">
+                                    Email
+                                </label>
+
+                                <input type="email" class="form-control" value="yasmin@example.com" readonly>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label class="form-label fw-bold">
+                                    Phone Number
+                                </label>
+
+                                <input type="text" class="form-control" value="+855 12 345 678" readonly>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label class="form-label fw-bold">
+                                    Location
+                                </label>
+
+                                <input type="text" class="form-control" value="Phnom Penh, Cambodia" readonly>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Saved Properties -->
+
+                    <div class="account-card">
+
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+
+                            <h4 class="fw-bold mb-0">
+                                <i class="fa-solid fa-heart text-danger"></i>
+                                Saved Properties
+                            </h4>
+
+                            <a href="properties.html" class="text-success text-decoration-none">
+                                View All
+                            </a>
+
+                        </div>
+
+
+                        <div class="row g-4">
+
+
+                            <!-- Saved Home 1 -->
+
+                            <div class="col-md-6">
+
+                                <div class="card property-card shadow-sm">
+
+                                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+                                        alt="Modern House">
+
+                                    <div class="card-body">
+
+                                        <div class="d-flex justify-content-between">
+
+                                            <h5 class="fw-bold">
+                                                Modern Family House
+                                            </h5>
+
+                                            <i class="fa-solid fa-heart text-danger"></i>
+
+                                        </div>
+
+                                        <p class="text-muted">
+
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            Phnom Penh
+
+                                        </p>
+
+                                        <p>
+                                            <i class="fa-solid fa-bed"></i>
+                                            3 Beds
+
+                                            &nbsp;&nbsp;
+
+                                            <i class="fa-solid fa-bath"></i>
+                                            2 Baths
+                                        </p>
+
+                                        <div class="price">
+                                            $150,000
+                                        </div>
+
+
+                                        <button class="btn btn-success w-100 mt-3">
+                                            View Details
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Saved Home 2 -->
+
+                            <div class="col-md-6">
+
+                                <div class="card property-card shadow-sm">
+
+                                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+                                        alt="Luxury Villa">
+
+                                    <div class="card-body">
+
+                                        <div class="d-flex justify-content-between">
+
+                                            <h5 class="fw-bold">
+                                                Luxury Villa
+                                            </h5>
+
+                                            <i class="fa-solid fa-heart text-danger"></i>
+
+                                        </div>
+
+                                        <p class="text-muted">
+
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            Sen Sok
+
+                                        </p>
+
+                                        <p>
+                                            <i class="fa-solid fa-bed"></i>
+                                            4 Beds
+
+                                            &nbsp;&nbsp;
+
+                                            <i class="fa-solid fa-bath"></i>
+                                            3 Baths
+                                        </p>
+
+                                        <div class="price">
+                                            $280,000
+                                        </div>
+
+                                        <button class="btn btn-success w-100 mt-3">
+                                            View Details
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EDIT PROFILE MODAL ================= -->
+
+    <div class="modal fade" id="editProfileModal" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title fw-bold">
+                        Edit Profile
+                    </h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    <form>
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Full Name
+                            </label>
+
+                            <input type="text" class="form-control" value="Yasmin Toyeb">
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Email
+                            </label>
+
+                            <input type="email" class="form-control" value="yasmin@example.com">
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Phone Number
+                            </label>
+
+                            <input type="text" class="form-control" value="+855 12 345 678">
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Location
+                            </label>
+
+                            <input type="text" class="form-control" value="Phnom Penh, Cambodia">
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+
+                    <button type="button" class="btn btn-success">
+                        Save Changes
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-4">
+
+                    <h4>
+                        <i class="fa-solid fa-house"></i>
+                        DreamHome
+                    </h4>
+
+                    <p class="text-secondary">
+                        Your trusted platform for finding
+                        your dream home.
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <h5>Quick Links</h5>
+
+                    <p>
+                        <a href="index.html">Home</a>
+                    </p>
+
+                    <p>
+                        <a href="properties.html">Properties</a>
+                    </p>
+
+                    <p>
+                        <a href="about.html">About</a>
+                    </p>
+
+                    <p>
+                        <a href="contact.html">Contact</a>
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <h5>Contact Us</h5>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +855 12 345 678
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        info@dreamhome.com
+                    </p>
+
+                    <div>
+
+                        <i class="fa-brands fa-facebook fa-lg me-3"></i>
+
+                        <i class="fa-brands fa-instagram fa-lg me-3"></i>
+
+                        <i class="fa-brands fa-telegram fa-lg"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+            <div class="text-center text-secondary">
+
+                © 2026 DreamHome. All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
